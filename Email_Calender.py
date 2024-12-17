@@ -20,7 +20,7 @@ from langchain_google_community.gmail.utils import (
 SCOPES = ["https://www.googleapis.com/auth/calendar","https://mail.google.com/"]
 def Format(input):
     llm = OpenRouter(
-            api_key="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",
+            api_key="",
             model="openai/gpt-4o-2024-11-20",
             )
     
@@ -135,7 +135,7 @@ gmail_tool = Tool(
         description="Drafts an email based on event details as plain text."
     )
     
-mainllm=ChatGroq(api_key ="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",
+mainllm=ChatGroq(api_key ="",
              model_name="gemma2-9b-it",temperature=0)    
     # Initialize agent with tools
 agent = initialize_agent(
